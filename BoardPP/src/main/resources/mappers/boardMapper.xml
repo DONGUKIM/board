@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.idu.mapper.BoardMapper">
+
+	<select id="selectBoardList" resultType="boardVO">
+	
+	select * from tbl_board 
+	
+	<if test="search.searchType != null and search.keyword != null">
+		<choose>
+			<when test = "search.searchType =='titlecontent'">
+				where title like CONCAT('%',#{search.keyword},'%') or content like CONCAT('%',#{search.keyword},'%')
+			</when>	
+			<otherwise>
+				where ${search.searchType} like CONCAT('%',#{search.keyword},'%')
+			</otherwise>
+		</choose>
+	</if>	
+	
+	order by bno desc limit #{page.firstContent},#{page.contentLimit}
+		
+	</select>
+	
+	<select id="readContent" resultType="boardVO">
+	
+	select * from tbl_board where bno=#{bno}
+	
+	</select>
+
+	<insert id="writeContent">
+	
+	insert into tbl_board(title,content,writer) values(#{title},#{content},#{writer})
+	
+	</insert>
+	
+	<!-- 업데이트시 업데이트 기록도 수정 -->
+	<update id="updateContent">
+	
+	update tbl_board set title=#{title}, content=#{content}  where bno = #{bno} 
+		
+	</update>
+	
+	<delete id="deleteContent">
+	
+	delete from tbl_board where bno=#{bno}
+	
+	</delete>
+	
+	<select id="pwCheck">
+	
+	select bpw from tbl_board where bno=#{bno}
+	
+	</select>
+	
+	<update id="increaseCnt">
+	
+	update tbl_board set viewcnt=viewcnt+1 where bno = #{bno}
+		
+	</update>
+	
+	<select id="countContent" resultType="int">
+	
+	select count(bno) from tbl_board 
+	<if test="searchType != null and keyword != null">
+		<choose>
+			<when test = "searchType =='titlecontent'">
+				where title like CONCAT('%',#{keyword},'%') or content like CONCAT('%',#{keyword},'%')
+			</when>	
+			<otherwise>
+				where ${searchType} like CONCAT('%',#{keyword},'%')
+			</otherwise>
+		</choose>
+	</if>	
+	
+	</select>
+</mapper>
