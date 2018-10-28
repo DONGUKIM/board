@@ -1,1 +1,47 @@
+1.application-cotext.xml 분석 및 자료 링크
+ https://docs.google.com/document/d/1br4HjJDnp_AfcaiGdUBGWvvTtu7Pt-n8LI8vJRL_3K8/edit
 
+2.Paging 관련 
+ https://okky.kr/article/282926
+
+3.Spring annotation 정리
+ http://noritersand.tistory.com/156
+ 
+4.업로드 기능 구현
+ https://coding-factory.tistory.com/34
+ https://programmingsummaries.tistory.com/85
+ http://rongscodinghistory.tistory.com/77
+ 
+5.이클립스 최적화 방법
+ http://jink1982.tistory.com/120
+ 
+6.이클립스 자주사용하는 단축키
+ http://blog.opid.kr/168
+
+7.Restful 서비스란
+ http://www.iamcorean.net/22
+ 
+8.Ubuntu apache 톰캣 연동법
+ http://all-record.tistory.com/188?category=733055
+
+9.Mybatis 설정법
+ http://ssmlim.tistory.com/41
+ http://wjheo.tistory.com/entry/%EC%8A%A4%ED%94%84%EB%A7%81MyBatisMySQL-%EC%97%B0%EB%8F%99-%EB%B0%8F-%ED%85%8C%EC%8A%A4%ED%8A%B8DAO-3%EB%8B%A8-%EA%B5%AC%EC%A1%B0%EB%A1%9C-%EA%B5%AC%ED%98%84
+
+10. jdbc 를 이용한 database 접근방식
+ https://gmlwjd9405.github.io/2018/05/15/setting-for-db-programming.html
+ 
+11.MYbatis 동적쿼리
+ http://dongram.tistory.com/11
+ 
+12.게시판 만들기 (검색구현)
+ https://doublesprogramming.tistory.com/96
+ 
+13. 스프링 구성요소와 동작 원리
+ http://asfirstalways.tistory.com/334
+ 
+14.root-context 와 sevlet-context 차이
+ http://animal-park.tistory.com/91
+ 
+14.component-scan / annotation-config / annotation-driven 차이점
+ http://hamait.tistory.com/322 
